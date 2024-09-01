@@ -43,6 +43,8 @@ products.forEach((product) => {
           </select>
         </div>
 
+        ${product.extraInfoHTML()}
+
         <div class="product-spacer"></div>
 
         <div class="added-to-cart">
@@ -67,7 +69,7 @@ function updateCartQuantity() {
         cartQuantity += cartItem.quantity;
       });
 
-      document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+      document.querySelector('.js-cart-quantity').innerHTML =cartQuantity;
 }
 
 document.querySelectorAll('.js-add-to-cart')
